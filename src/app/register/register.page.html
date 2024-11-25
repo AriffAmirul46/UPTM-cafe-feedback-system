@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="register-container">
+    <div class="register-box">
+      <h1>Create new Account</h1>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.name" placeholder="Enter your name"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="registerData.email" placeholder="Enter your email"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="registerData.password" placeholder="Enter your password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" class="register-button" (click)="registerUser()">
+        Sign up
+      </ion-button>
+
+      <p class="login-link-text">
+        Already Registered? <a (click)="goToLogin()">Log in here</a>
+      </p>
+    </div>
+  </div>
+</ion-content>

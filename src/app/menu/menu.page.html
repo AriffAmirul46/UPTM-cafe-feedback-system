@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cafe Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let menuItem of menuItems">
+    <ion-card>
+      <!-- Image for the menu item -->
+      
+
+      <!-- Card Content: Name, description, and price -->
+      <ion-card-content>
+        <ion-card-title>{{ menuItem.name }}</ion-card-title>
+        <p>{{ menuItem.description }}</p>
+        <p><strong>Price:</strong> RM{{ menuItem.price }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

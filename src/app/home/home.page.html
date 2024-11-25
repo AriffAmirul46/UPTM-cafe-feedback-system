@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feedback System</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-background">
+  <div class="center-content">
+    <h2>Welcome to UPTM Feedback Cafe!</h2>
+    <p>Feel free to share your feedback about our cafe.</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="footer-buttons">
+      <!-- Menu Button -->
+      <ion-button (click)="goToMenu()">
+        <ion-icon slot="icon-only" name="restaurant-outline"></ion-icon>
+      </ion-button>
+      <!-- Feedback Button -->
+      <ion-button (click)="goToFeedback()">
+        <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+      </ion-button>
+      <!-- Contact Us Button -->
+      <ion-button (click)="goToContact()">
+        <ion-icon slot="icon-only" routerLink="/Contact" name="call-outline"></ion-icon>
+      </ion-button>
+      <!-- About Us Button -->
+      <ion-button (click)="goToAbout()">
+        <ion-icon slot="icon-only" routerLink="/About" name="information-circle-outline"></ion-icon>
+      </ion-button>
+      <!-- Logout Button -->
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

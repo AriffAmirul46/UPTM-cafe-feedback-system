@@ -1,0 +1,45 @@
+.about-section {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .about-intro h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+  }
+  
+  .about-intro p {
+    font-size: 1em;
+    font-weight: 300;
+    color: #555;
+  }
+  
+  .about-image {
+    width: 100%;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  
+  .about-content h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 16px 0 8px;
+  }
+  
+  .about-content p,
+  .about-content ul {
+    font-size: 1em;
+    font-weight: 300;
+    color: #444;
+  }
+  
+  .about-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-content ul li {
+    margin: 8px 0;
+  }
+  

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Feedback Submission Form -->
+  <form (ngSubmit)="submitFeedback()">
+    <ion-item>
+      <ion-label position="floating">Rating (1-5)</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="newFeedback.rating"
+        name="rating"
+        required
+        min="1"
+        max="5"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea
+        [(ngModel)]="newFeedback.message"
+        name="message"
+        required
+      ></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="!newFeedback.rating || !newFeedback.message">
+      Submit Feedback
+    </ion-button>
+  </form>
+
+ 
+
+  <!-- Feedback History -->
+  <ng-container *ngIf="feedbacks.length > 0; else noFeedback">
+    <ion-list>
+      <ion-item *ngFor="let feedback of feedbacks">
+        <ion-label>
+          <p><strong>Rating:</strong> {{ feedback.rating }}</p>
+          <p><strong>Message:</strong> {{ feedback.message }}</p>
+          <p *ngIf="feedback.reply"><strong>Admin Reply:</strong> {{ feedback.reply }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <ng-template #noFeedback>
+    <p>No feedback available.</p>
+  </ng-template>
+</ion-content>
